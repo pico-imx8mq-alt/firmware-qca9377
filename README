@@ -1,0 +1,17 @@
+Download QCA9377 firmware archive from TechNexion FTP archive:
+
+ftp://ftp.technexion.net/development_resources/Download/wifi_firmware/Qualcomm/QCA9377/qca9377-3_firmware_20180927.zip
+
+Be prepared that archive name can change.
+
+Unpack it:
+
+unzip qca9377-3_firmware_20180927.zip -d qca9377
+
+Temporary add to Git so Gear will be able to work with it:
+
+git add qca9377
+
+Build package:
+
+gear-hsh -v --commit --no-sisyphus-check=packager,gpg,changelog -- -v --with-qemu=aarch64 --target=aarch64
