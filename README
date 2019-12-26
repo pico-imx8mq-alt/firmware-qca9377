@@ -1,12 +1,18 @@
-Download QCA9377 firmware archive from TechNexion FTP archive:
+Set version:
 
-ftp://ftp.technexion.net/development_resources/Download/wifi_firmware/Qualcomm/QCA9377/qca9377-3_firmware_20180927.zip
+qcaversion=2.0.3
 
-Be prepared that archive name can change.
+Download the archive:
 
-Unpack it:
+wget https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-qca-$qcaversion.bin
 
-unzip qca9377-3_firmware_20180927.zip -d qca9377
+Unpack it and accept the license agreement:
+
+sh ./firmware-qca-$qcaversion.bin --auto-accept --force
+
+Rename output directory for convenience:
+
+mv firmware-qca-$qcaversion/1PJ_QCA9377-3_LEA_2.0 qca9377
 
 Temporary add to Git so Gear will be able to work with it:
 
