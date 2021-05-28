@@ -1,7 +1,7 @@
 %define orig_name qca9377
 
 Name: firmware-qca9377
-Version: 3_2.0.4
+Version: 3_3.0.2
 Release: alt1
 
 Packager: Pavel Nakonechnyi <zorg@altlinux.org>
@@ -30,6 +30,9 @@ cp -a lib/* %buildroot/lib/
 /etc/bluetooth/*
 
 %changelog
+* Fri May 28 2021 Pavel Nakonechnyi <zorg@altlinux.org> 3_3.0.2-alt1
+- updated to 3.0.2 version
+
 * Tue Oct 27 2020 Pavel Nakonechnyi <zorg@altlinux.org> 3_2.0.4-alt1
 - updated to 2.0.4 version
 
